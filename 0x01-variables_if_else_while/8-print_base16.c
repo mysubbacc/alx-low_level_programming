@@ -8,12 +8,17 @@
 int main(void)
 {
 	int nombe = 0;
-	while(nombe < 10) {
+	char lett;
+
+	while (nombe < 10)
+	{
 		putchar(nombe + '0');
 		nombe++;
 	}
-	char lett = 'a';
-	while(lett <= 'f') {
+	lett = 'a';
+
+	while (lett <= 'f')
+	{
 		putchar(lett);
 		lett++;
 	}
