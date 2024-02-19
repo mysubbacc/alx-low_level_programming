@@ -1,47 +1,34 @@
 #include <stdio.h>
 
 /**
- * main - print two numbers combination
- * Return: 0
+ * * main-print all possible combinations of two two digits
+ * * Return: 0 if successful
  */
 
 int main(void)
+
 {
-    int i, j, k, l;
-    i = 0;
+	int i, j;
 
-    while (i < 10)
-    {
-        j = 0;
-        while (j < 9)
-        {
-            k = 0;
-            while (k < 10)
-            {
-                l = k + 1;
-                while (l < 10)
-                {
-                    putchar(i + '0');
-                    putchar(j + '0');
-                    putchar(' ');
-                    putchar(k + '0');
-                    putchar(l + '0');
-
-            
-                    if (!(i == 9 && j == 8 && k == 9 && l == 9)) {
-                        putchar(',');
-                        putchar(' ');
-                    }
-
-                    l++;
-                }
-                k++;
-            }
-            j++;
-        }
-        i++;
-    }
-    putchar('\n');
-    return (0);
+	for (i = 0; i < 100; i++)
+	{
+		for (j = 0; j < 100; j++)
+		{
+			if (i < j)
+			{
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
-

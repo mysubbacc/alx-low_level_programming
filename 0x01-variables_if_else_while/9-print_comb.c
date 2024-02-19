@@ -1,21 +1,25 @@
 #include <stdio.h>
 
 /**
- * main - print numbers
- * Return: 0
+ * * main-print all possible combinations of single digit numbers
+ * * followed by a space
+ * * Return: 0 if successful
  */
 
 int main(void)
-{
-	int nome = 0;
 
-	while (nome < 9)
+{
+	int n;
+
+	for (n = 48; n < 58; n++)
 	{
-		putchar(nome + '0');
-		putchar(',');
-		putchar(' ');
-		nome++;
+		putchar(n);
+		if (n != 57)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
-	putchar(nome + '0');
+	putchar('\n');
 	return (0);
 }
