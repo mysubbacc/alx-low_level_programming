@@ -3,5 +3,6 @@
 int main(void)
 {
 	int printputchar(void);
+	return (0);
 
 }
