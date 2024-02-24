@@ -21,7 +21,7 @@ int main(void)
 		j = a;
 		k = b;
 		l = j + k;
-		if (i < 49)
+		if (i < 50)
 			printf("%lu, ", l);
 		else
 			printf("%lu", l);
