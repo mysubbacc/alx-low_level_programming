@@ -15,7 +15,7 @@ int main(void)
 	unsigned long int a = 0;
 	unsigned long int b = 1;
 
-	for (i = 1; i < 50; i++)
+	for (i = 1; i <= 50; i++)
 	{
 		unsigned long int j, k, l;
 		j = a;
