@@ -29,6 +29,7 @@ int main(void)
 		b = l;
 	}
 	printf("\n");
+	return (0);
 }
 
 
