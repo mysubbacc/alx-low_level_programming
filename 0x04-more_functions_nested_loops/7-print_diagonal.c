@@ -11,11 +11,12 @@ void print_diagonal(int n)
 	if (n > 0)
 	{
 		int i, j;
-		j = 0;
+		j = -1;
 
 		for (i = 1; i <= n; i++)
 		{
-			for (i = 1; i <= n; i++)
+
+			for (i = 1; i < n; i++)
 			{
 				j++;
 
