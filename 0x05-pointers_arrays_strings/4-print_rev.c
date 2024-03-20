@@ -1,19 +1,17 @@
 #include "main.h"
 
 /**
- * print_rev - print *s in reverse form
- * *s: string to reverse
+ * print_rev - prints a string in reverse order
+ * @s: pointer to the string to be reversed
+ *
  * Return: void
  */
-
 void print_rev(char *s)
 {
 	int i, j;
-	j = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (j = 0; s[j] != '\0'; j++)
 	{
-		j++;
 	}
 
 	for (i = j - 1; i >= 0; i--)
