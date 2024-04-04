@@ -2,7 +2,7 @@
 
 /**
   * *rot13 - coding of rot13
-  * @*s: hold the string
+  * @s: hold the string
   * Return: s
   */
 
