@@ -1,17 +1,17 @@
 #include "main.h"
 
 /**
-  * *leet - encoding string
-  * @s: string to convert
+  * *rot13 - coding of rot13
+  * @*s: hold the string
   * Return: s
   */
 
-char *leet(char *s)
+char *rot13(char *s)
 {
 	int i, j;
 
-	char a[] = "aAeEoOtTlL";
-	char b[] = "4433007711";
+	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
