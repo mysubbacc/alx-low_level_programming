@@ -75,7 +75,7 @@ void print_ascii_line(char *b, int start, int size)
             printf(".");
         }
     }
-    if (size - start < 10)
+    for (j = size - start; j < 10; j++)
     {
 	    printf(" ");
     }
