@@ -9,30 +9,27 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int length = 0;
-    
+
 	while (*s != '\0')
 	{
 		char *a = accept;
-        
+
 		while (*a != '\0')
 		{
-            
+
 			if (*s == *a)
 			{
-			length++;
+				length++;
+				break;
+			}
+			a++;
+		}
+
+		if (*a == '\0')
+		{
 			break;
 		}
-		a++;
+		s++;
 	}
-        
-        
-	if (*a == '\0')
-	{
-            break;
-        }
-        
-        s++;
-    }
-    
-    return (length);
+	return (length);
 }
