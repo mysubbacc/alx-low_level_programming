@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
-  * is plindrome - is an helper function
+  * is_plindrome - is an helper function
   * @s: hold the string
-  * @i: string length
+  * @start: start of a string
+  * @end: end of string length
   * Return: 0 or 1
   */
 
