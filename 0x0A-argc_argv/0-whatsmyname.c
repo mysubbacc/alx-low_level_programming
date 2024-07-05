@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+/**
+ * main - check the main pro
+ * @argc: number
+ * @argv: vector
+ * Return: o
+ */
+
 int main(int argc, char *argv[])
 {
 	if (argc < 2)
