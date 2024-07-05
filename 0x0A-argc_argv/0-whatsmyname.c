@@ -3,10 +3,9 @@
 
 /**
  * main - prints it name
- * @argc: argument count
- * @argv: argument vector
- *
- * Return: 0 if success, or any other number on fail
+ * @argc: argument
+ * @argv: argument
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
