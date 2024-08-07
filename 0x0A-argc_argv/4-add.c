@@ -1,57 +1,54 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
- * my_isdigit - chect if a number is a digit or not
- * @s: holds the character
- * Return: 0 or 1.
+ * my_isdigit - Check if a character is a digit.
+ * @c: The character to check.
+ * 
+ * Return: 1 if the character is a digit, 0 otherwise.
  */
-
-int my_isdigit(char s)
+int my_isdigit(char c)
 {
-	return (s >= '0' && s <= '9');
+    return (c >= '0' && c <= '9');
 }
 
 /**
- * main - main add all positive integers or real numbers
- * @argc: arguement count
- * @argv: argumment vector
- * Return: 0 or 1.
+ * main - Adds all positive integers provided as command line arguments.
+ * @argc: Argument count.
+ * @argv: Argument vector.
+ * 
+ * Return: 0 on success, 1 on error.
  */
-
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+    int i, sum = 0;
+    char *ptr;
 
-	if (argc == 1)
-	{
-		printf("0\n");
+    if (argc == 1)
+    {
+        printf("0\n");
+        return (0);
+    }
 
-		return (1);
-	}
+    for (i = 1; i < argc; i++)
+    {
+        ptr = argv[i];
 
-	for (i = 1; i < argc; i++)
-	{
-		char *ptr = argv[i];
+        while (*ptr)
+        {
+            if (!my_isdigit(*ptr))
+            {
+                printf("Error\n");
+                return (1);
+            }
+            ptr++;
+        }
 
-		while (*ptr)
-		{
-			if (!my_isdigit(*ptr))
-			{
-				printf("Error\n");
+        sum += atoi(argv[i]);
+    }
 
-				return (1);
-			}
-
-			ptr++;
-		}
-
-		sum += atoi(argv[i]);
-	}
-
-	printf("%d\n", sum);
-
-	return 0;
+    printf("%d\n", sum);
+    return (0);
 
 }
-
