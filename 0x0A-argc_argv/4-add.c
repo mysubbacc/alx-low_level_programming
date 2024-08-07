@@ -10,7 +10,7 @@
  */
 int my_isdigit(char c)
 {
-    return (c >= '0' && c <= '9');
+	return (c >= '0' && c <= '9');
 }
 
 /**
@@ -22,33 +22,34 @@ int my_isdigit(char c)
  */
 int main(int argc, char *argv[])
 {
-    int i, sum = 0;
-    char *ptr;
+	int i, sum = 0;
+	char *ptr;
 
-    if (argc == 1)
-    {
-        printf("0\n");
-        return (0);
-    }
+	if (argc == 1)
+	{
+		printf("0\n");
+		return (0);
+	}
 
-    for (i = 1; i < argc; i++)
-    {
-        ptr = argv[i];
 
-        while (*ptr)
-        {
-            if (!my_isdigit(*ptr))
-            {
-                printf("Error\n");
-                return (1);
-            }
-            ptr++;
-        }
+	for (i = 1; i < argc; i++)
+	{
+		ptr = argv[i];
 
-        sum += atoi(argv[i]);
-    }
+		while (*ptr)
+		{
+			if (!my_isdigit(*ptr))
+			{
+				printf("Error\n");
+				return (1);
+			}
 
-    printf("%d\n", sum);
-    return (0);
+			ptr++;
+		}
 
+		sum += atoi(argv[i]);
+	}
+
+	printf("%d\n", sum);
+	return (0);
 }
