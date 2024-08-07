@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - multiply two numbers together
@@ -11,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int mul;
 
-	if (argc > 2)
+	if (argc == 3)
 	{
 		mul = atoi(argv[1]) * atoi(argv[2]);
 
