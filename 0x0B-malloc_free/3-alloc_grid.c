@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * alloc_grind - allocate memory for two D arrays
+ * alloc_grid - allocate memory for two D arrays
  * @width: rows of the array
  * @height: columns of the array
  * Return: NULL or pointer to the array
