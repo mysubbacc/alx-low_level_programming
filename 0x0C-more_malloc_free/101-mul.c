@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#include <unistd.h>
 
 /**
  * is_digit - checks if a string contains only digits
@@ -73,16 +74,6 @@ char *multiply(char *num1, char *num2)
 }
 
 /**
- * _puts - prints a string using _putchar
- * @str: string to print
- */
-void _puts(char *str)
-{
-    while (*str)
-        _putchar(*str++);
-}
-
-/**
  * main - multiplies two positive numbers passed as command line arguments
  * @argc: number of arguments
  * @argv: array of arguments
@@ -91,10 +82,13 @@ void _puts(char *str)
 int main(int argc, char *argv[])
 {
     char *num1, *num2, *product;
+    int i;
 
     if (argc != 3 || !is_digit(argv[1]) || !is_digit(argv[2]))
     {
-        _puts("Error\n");
+        char *error = "Error\n";
+        for (i = 0; error[i]; i++)
+            _putchar(error[i]);
         exit(98);
     }
 
@@ -104,12 +98,16 @@ int main(int argc, char *argv[])
     product = multiply(num1, num2);
     if (!product)
     {
-        _puts("Error\n");
+        char *error = "Error\n";
+        for (i = 0; error[i]; i++)
+            _putchar(error[i]);
         exit(98);
     }
 
-    _puts(product);
+    for (i = 0; product[i]; i++)
+        _putchar(product[i]);
     _putchar('\n');
+
     free(product);
 
     return (0);
