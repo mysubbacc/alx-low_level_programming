@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -30,12 +31,16 @@ char *multiply(char *num1, char *num2)
     int len1 = strlen(num1);
     int len2 = strlen(num2);
     int len = len1 + len2;
-    int *result = calloc(len, sizeof(int));
+    int *result = malloc(len * sizeof(int));
     char *product;
     int i, j, carry;
 
     if (!result)
         return (NULL);
+
+    /* Initialize the result array to zero */
+    for (i = 0; i < len; i++)
+        result[i] = 0;
 
     for (i = len1 - 1; i >= 0; i--)
     {
@@ -68,6 +73,16 @@ char *multiply(char *num1, char *num2)
 }
 
 /**
+ * _puts - prints a string using _putchar
+ * @str: string to print
+ */
+void _puts(char *str)
+{
+    while (*str)
+        _putchar(*str++);
+}
+
+/**
  * main - multiplies two positive numbers passed as command line arguments
  * @argc: number of arguments
  * @argv: array of arguments
@@ -79,7 +94,7 @@ int main(int argc, char *argv[])
 
     if (argc != 3 || !is_digit(argv[1]) || !is_digit(argv[2]))
     {
-        printf("Error\n");
+        _puts("Error\n");
         exit(98);
     }
 
@@ -89,13 +104,13 @@ int main(int argc, char *argv[])
     product = multiply(num1, num2);
     if (!product)
     {
-        printf("Error\n");
+        _puts("Error\n");
         exit(98);
     }
 
-    printf("%s\n", product);
+    _puts(product);
+    _putchar('\n');
     free(product);
 
     return (0);
 }
-
